@@ -3,7 +3,7 @@
 
 - name: Import vars.yml
   ansible.builtin.import_tasks: vars.yml
-  tags: [apache_vars, always]
+  tags: apache_vars
 
 - name: Import debug.yml
   ansible.builtin.import_tasks: debug.yml
