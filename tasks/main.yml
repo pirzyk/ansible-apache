@@ -3,7 +3,7 @@
 
 - name: Include OS vars.
   ansible.builtin.import_tasks: vars.yml
-  tags: [apache_vars, always]
+  tags: apache_vars
 
 - name: Display variables.
   ansible.builtin.import_tasks: debug.yml
