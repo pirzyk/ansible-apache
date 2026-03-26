@@ -46,5 +46,6 @@ apache_rcconf: []
 apache_ansible_lib:
   vbotka.apache: vbotka.ansible_lib
   vbotka.freebsd.apache: vbotka.freebsd.lib
+  ansible-role-apache: vbotka.ansible_lib
 
 # EOF

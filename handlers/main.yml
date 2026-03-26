@@ -46,41 +46,41 @@
 
 - name: Enable and start vbotka.freebsd.apache
   listen: enable and start vbotka.freebsd.apache
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: start
 
 - name: Disable and stop vbotka.freebsd.apache
   listen: disable and stop vbotka.freebsd.apache
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: stop
 
 - name: Restart vbotka.freebsd.apache
   listen: restart vbotka.freebsd.apache
   when: apache_enable | bool
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: restart
 
 - name: Reload vbotka.freebsd.apache
   listen: reload vbotka.freebsd.apache
   when: apache_enable | bool
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: reload
 
 - name: Graceful vbotka.freebsd.apache
   listen: graceful vbotka.freebsd.apache
   when: apache_enable | bool
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: graceful
 
 - name: Gracefulstop vbotka.freebsd.apache
   listen: gracefulstop vbotka.freebsd.apache
   when: apache_enable | bool
-  vbotka.freebsd.service:
+  ansible.builtin.service:
     script: "{{ apache_service }}"
     command: gracefulstop
 
